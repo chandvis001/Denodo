@@ -1,0 +1,856 @@
+﻿# Generated with Denodo Platform 7.0.
+
+ENTER SINGLE USER MODE;
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+# #######################################
+# USER CREATION
+# #######################################
+# #######################################
+# ROLE CREATION
+# #######################################
+# #######################################
+# CONFIGURATION PROPERTIES
+# #######################################
+
+CONNECT DATABASE admin;
+
+SET 'com.denodo.security.file.privilege.generalaccess' = '*';
+
+SET 'com.denodo.vdb.cache.cacheMaintainerPeriodInSecs' = '21600';
+
+SET 'com.denodo.vdb.cache.cacheMaintenance' = 'ON';
+
+SET 'com.denodo.vdb.cache.cacheStatus' = 'ON';
+
+SET 'com.denodo.vdb.cache.jdbc.cacheDataSourceName' = 'vdpcachedatasource';
+
+SET 'com.denodo.vdb.cache.jdbc.cacheDatabaseDataSourceName' = 'admin';
+
+SET 'com.denodo.vdb.cache.jdbc.customCacheDataSourceName' = 'customvdpcachedatasource';
+
+SET 'com.denodo.vdb.cache.jdbc.derbyCachePort' = '1527';
+
+SET 'com.denodo.vdb.cache.jdbc.derbyCacheRemoteAccess' = 'OFF';
+
+SET 'com.denodo.vdb.cache.timeToLiveInSecs' = '3600';
+
+SET 'com.denodo.vdb.catalog.database.identifiersCharset' = 'restricted';
+
+SET 'com.denodo.vdb.engine.RowQueueSizeInMB' = '10';
+
+SET 'com.denodo.vdb.engine.resource.queryMemoryLimit' = '200';
+
+SET 'com.denodo.vdb.engine.session.restriction.ResourceManagerEngine.resourceManagerStatus' = 'ON';
+
+SET 'com.denodo.vdb.engine.swap.SwapManager.maxBlockSizeInKB' = '200';
+
+SET 'com.denodo.vdb.engine.swap.SwapManager.swappingResultMaxSizeInMB' = '50';
+
+SET 'com.denodo.vdb.engine.swap.SwapManager.swappingStatus' = 'ON';
+
+SET 'com.denodo.vdb.engine.wrapper.raw.ldap.LDAPAccess.LDAPDefaultPageSize' = '1000';
+
+SET 'com.denodo.vdb.interpreter.execution.SelectAction.costoptimization' = 'false';
+
+SET 'com.denodo.vdb.interpreter.execution.SelectAction.dataMovement' = 'true';
+
+SET 'com.denodo.vdb.interpreter.execution.SelectAction.simplify' = 'true';
+
+SET 'com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.concurrentQueriesLimit' = 'OFF';
+
+SET 'com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.maxConcurrentQueries' = '100';
+
+SET 'com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.maxWaitingQueries' = '500';
+
+SET 'com.denodo.vdb.interpreter.execution.processor.VDBActionProcessor.waitingQueriesLimit' = 'OFF';
+
+SET 'com.denodo.vdb.misc.I18nParametersManager.i18nDefault' = 'gb';
+
+SET 'com.denodo.vdb.proxy.proxyHost' = '';
+
+SET 'com.denodo.vdb.proxy.proxyPacUri' = '';
+
+SET 'com.denodo.vdb.proxy.proxyPassword' = '';
+
+SET 'com.denodo.vdb.proxy.proxyPort' = '';
+
+SET 'com.denodo.vdb.proxy.proxyStatus' = 'OFF';
+
+SET 'com.denodo.vdb.proxy.proxyUser' = '';
+
+SET 'com.denodo.vdb.vdbinterface.server.VDBManagerImpl.factoryPort' = '9997';
+
+SET 'com.denodo.vdb.vdbinterface.server.VDBManagerImpl.odbcPort' = '9996';
+
+SET 'com.denodo.vdb.vdbinterface.server.VDBManagerImpl.registryPort' = '9999';
+
+SET 'com.denodo.vdb.vdbinterface.server.VDBManagerImpl.registryURL' = 'localhost';
+
+SET 'com.denodo.vdb.vdbinterface.server.VDBManagerImpl.shutdownPort' = '9998';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.encryptedPassword' = '';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.environment' = '';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.localRepositoriesHome' = 'C:/Denodo/DenodoPlatform7.0/work/vdp/repository';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.password' = '';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.system' = '';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.url' = '';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.useUserAndPassword' = '';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.useVCS' = '';
+
+SET 'com.denodo.vdb.vdbinterface.server.vcs.VCSConfigurationManager.user' = '';
+
+SET 'com.denodo.wsgenerator.restfulws.timezone' = 'GMT';
+
+SET 'java.env.DENODO_OPTS_START' = '-mx1024m -XX:NewRatio=4';
+
+SET 'java.env.DENODO_OPTS_STOP' = '';
+
+SET 'queryOptimization.parallelProcessing.customDataSource.dataSourceName' = '';
+
+SET 'queryOptimization.parallelProcessing.customDataSource.databaseName' = '';
+
+SET 'queryOptimization.parallelProcessing.dataSource' = 'cache';
+
+SET 'queryOptimization.parallelProcessing.enabled' = 'false';
+
+SET 'storedProcedures.defaultChunkSize' = '100';
+
+SET 'storedProcedures.defaultChunkTimeout' = '80000';
+
+SET 'storedProcedures.defaultQueryTimeout' = '80000';
+
+SET 'userAgent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.13';
+
+WEBCONTAINER SET 'com.denodo.tomcat.http.port' = '9090';
+
+WEBCONTAINER SET 'com.denodo.tomcat.jmx.port' = '9098';
+
+WEBCONTAINER SET 'com.denodo.tomcat.jmx.rmi.port' = '9097';
+
+WEBCONTAINER SET 'com.denodo.tomcat.shutdown.port' = '9099';
+
+WEBCONTAINER SET 'java.env.DENODO_OPTS_START' = '-Xmx1024m -Dorg.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true -Dorg.apache.catalina.connector.CoyoteAdapter.ALLOW_BACKSLASH=true';
+
+UPDATE SCRIPTS;
+
+CLOSE;
+
+
+# 0 ====================================================================
+
+# #######################################
+# DATABASE of admin
+# #######################################
+CONNECT DATABASE admin;
+
+# #######################################
+# LISTENERS JMS of admin
+# #######################################
+# No listeners jms in database admin
+# #######################################
+# DATASOURCES of admin
+# #######################################
+DROP DATASOURCE JDBC IF EXISTS vdpcachedatasource CASCADE;
+
+CREATE DATASOURCE JDBC vdpcachedatasource
+    DRIVERCLASSNAME = 'org.apache.derby.jdbc.ClientDriver'
+    DATABASEURI = 'jdbc:derby://localhost:1527/cache'
+    USERNAME = 'vdpcache'
+    USERPASSWORD = '2WdLC0+5HGSWxv1nYeQjMd8jncuJnKguODinRrWsmdSLHsQYqyuWI/4L82S+SSWSowsBYepdaSMJ201eqRO3EPurLzFcARSJi0L910h6q0lA5mGucGA/4JzZWTQdRpvf' ENCRYPTED
+    CLASSPATH = 'derby-10'
+    DATABASENAME = 'derby'
+    DATABASEVERSION = '10'
+    FETCHSIZE = 1000
+    VALIDATIONQUERY = 'values 1'
+    INITIALSIZE = 4
+    MAXIDLE = -1
+    MINIDLE = 0
+    MAXACTIVE = 20
+    EXHAUSTEDACTION = 1
+    TESTONBORROW = true
+    TESTONRETURN = false
+    TESTWHILEIDLE = false
+    TIMEBETWEENEVICTION = -1
+    NUMTESTPEREVICTION = 3
+    MINEVICTABLETIME = 1800000
+    POOLPREPAREDSTATEMENTS = false
+    MAXSLEEPINGPS = 4
+    INITIALCAPACITYPS = 8
+    DATA_LOAD_CONFIGURATION (
+        BATCHINSERTSIZE = 200
+    );
+
+CHOWN admin DATASOURCE JDBC vdpcachedatasource LASTMODIFICATIONUSER admin;
+
+# #######################################
+# DATABASE CONFIGURATION
+# #######################################
+ALTER DATABASE admin
+  CHARSET DEFAULT;
+
+# #######################################
+# WRAPPERS of admin
+# #######################################
+# No wrappers in database admin
+# #######################################
+# STORED PROCEDURES of admin
+# #######################################
+# No stored procedures in database admin
+# #######################################
+# TYPES of admin
+# #######################################
+# No types in database admin
+# #######################################
+# MAPS of admin
+# #######################################
+# No maps in database admin
+# #######################################
+# BASE VIEWS of admin
+# #######################################
+# No base views in database admin
+# #######################################
+# VIEWS of admin
+# #######################################
+# No views in database admin
+# #######################################
+# ASSOCIATIONS of admin
+# #######################################
+# No associations in database admin
+# #######################################
+# WEBSERVICES of admin
+# #######################################
+# No web services in database admin
+# #######################################
+# WIDGETS of admin
+# #######################################
+# No widgets in database admin
+# #######################################
+# WEBCONTAINER WEB SERVICE DEPLOYMENTS of admin
+# #######################################
+# No deployed web services in database admin
+# #######################################
+# WEBCONTAINER WIDGET DEPLOYMENTS of admin
+# #######################################
+# No deployed widgets in database admin
+# #######################################
+# Closing connection with database admin
+# #######################################
+CLOSE;
+
+
+# 1 ====================================================================
+
+# #######################################
+# DATABASE of itpilot
+# #######################################
+CONNECT DATABASE itpilot;
+
+# #######################################
+# LISTENERS JMS of itpilot
+# #######################################
+# No listeners jms in database itpilot
+# #######################################
+# DATASOURCES of itpilot
+# #######################################
+# No data sources in database itpilot
+# #######################################
+# DATABASE CONFIGURATION
+# #######################################
+ALTER DATABASE itpilot
+  CHARSET DEFAULT;
+
+# #######################################
+# WRAPPERS of itpilot
+# #######################################
+# No wrappers in database itpilot
+# #######################################
+# STORED PROCEDURES of itpilot
+# #######################################
+# No stored procedures in database itpilot
+# #######################################
+# TYPES of itpilot
+# #######################################
+# No types in database itpilot
+# #######################################
+# MAPS of itpilot
+# #######################################
+# No maps in database itpilot
+# #######################################
+# BASE VIEWS of itpilot
+# #######################################
+# No base views in database itpilot
+# #######################################
+# VIEWS of itpilot
+# #######################################
+# No views in database itpilot
+# #######################################
+# ASSOCIATIONS of itpilot
+# #######################################
+# No associations in database itpilot
+# #######################################
+# WEBSERVICES of itpilot
+# #######################################
+# No web services in database itpilot
+# #######################################
+# WIDGETS of itpilot
+# #######################################
+# No widgets in database itpilot
+# #######################################
+# WEBCONTAINER WEB SERVICE DEPLOYMENTS of itpilot
+# #######################################
+# No deployed web services in database itpilot
+# #######################################
+# WEBCONTAINER WIDGET DEPLOYMENTS of itpilot
+# #######################################
+# No deployed widgets in database itpilot
+# #######################################
+# Closing connection with database itpilot
+# #######################################
+CLOSE;
+
+
+# 2 ====================================================================
+
+# #######################################
+# DATABASE of tutorial
+# #######################################
+DROP DATABASE IF EXISTS tutorial;
+
+CREATE DATABASE tutorial '';
+
+CONNECT DATABASE tutorial;
+
+# #######################################
+# FOLDERS of tutorial
+# #######################################
+CREATE OR REPLACE FOLDER '/1 - first steps' ;
+
+CHOWN admin FOLDER '/1 - first steps';
+
+CREATE OR REPLACE FOLDER '/1 - first steps/1 - Data Sources' ;
+
+CHOWN admin FOLDER '/1 - first steps/1 - Data Sources';
+
+CREATE OR REPLACE FOLDER '/1 - first steps/2 - Base Views' ;
+
+CHOWN admin FOLDER '/1 - first steps/2 - Base Views';
+
+CREATE OR REPLACE FOLDER '/1 - first steps/3 - Derived Views' ;
+
+CHOWN admin FOLDER '/1 - first steps/3 - Derived Views';
+
+CREATE OR REPLACE FOLDER '/2 - data services' ;
+
+CHOWN admin FOLDER '/2 - data services';
+
+CREATE OR REPLACE FOLDER '/2 - data services/REST' ;
+
+CHOWN admin FOLDER '/2 - data services/REST';
+
+CREATE OR REPLACE FOLDER '/2 - data services/SOAP' ;
+
+CHOWN admin FOLDER '/2 - data services/SOAP';
+
+# #######################################
+# LISTENERS JMS of tutorial
+# #######################################
+# No listeners jms in database tutorial
+# #######################################
+# DATASOURCES of tutorial
+# #######################################
+DROP DATASOURCE JDBC IF EXISTS acme_crm_ds CASCADE;
+
+CREATE DATASOURCE JDBC acme_crm_ds
+    FOLDER = '/1 - first steps/1 - data sources'
+    DRIVERCLASSNAME = 'com.mysql.jdbc.Driver'
+    DATABASEURI = 'jdbc:mysql://localhost:3306/acme_crm'
+    USERNAME = 'acme_user'
+    USERPASSWORD = '1Km5fpXGqtZSbjAtVlCxvGKLdOAErJNkkohSxYmUD4gS0yq17oI3KDRj3NIZYOM7/juz/tvDzjtDv/VF0ggjyI0lODU7lHLrr3MXJ1+q8DVaqsKH9wFB82p29JqNjCfe' ENCRYPTED
+    CLASSPATH = 'mysql-5'
+    DATABASENAME = 'mysql'
+    DATABASEVERSION = '5'
+    FETCHSIZE = 1000
+    VALIDATIONQUERY = 'Select 1'
+    INITIALSIZE = 4
+    MAXIDLE = -1
+    MINIDLE = 0
+    MAXACTIVE = 20
+    EXHAUSTEDACTION = 1
+    TESTONBORROW = true
+    TESTONRETURN = false
+    TESTWHILEIDLE = false
+    TIMEBETWEENEVICTION = -1
+    NUMTESTPEREVICTION = 3
+    MINEVICTABLETIME = 1800000
+    POOLPREPAREDSTATEMENTS = false
+    MAXSLEEPINGPS = 4
+    INITIALCAPACITYPS = 8
+    PROPERTIES ('vdp.streamRows'='yes')
+    DATA_LOAD_CONFIGURATION (
+        BATCHINSERTSIZE = 200
+        USEEXTERNALTABLES ( 
+            ONMOVEREAD = false,
+            ONMOVEWRITE = true
+        )
+    );
+
+CHOWN admin DATASOURCE JDBC acme_crm_ds LASTMODIFICATIONUSER admin;
+
+DROP DATASOURCE WS IF EXISTS soap_billing_ds CASCADE;
+
+CREATE DATASOURCE WS soap_billing_ds
+    FOLDER = '/1 - first steps/1 - data sources'
+    WSDLURI = 'http://localhost:8080/billing/services/BillProvider?wsdl'
+    MAXCONNECTIONS 50
+    CONNECTIONPOOLTIMEOUT 0
+    AUTHENTICATION OFF
+    PROXY OFF;
+
+CHOWN admin DATASOURCE WS soap_billing_ds LASTMODIFICATIONUSER admin;
+
+# #######################################
+# DATABASE CONFIGURATION
+# #######################################
+ALTER DATABASE tutorial
+  CHARSET DEFAULT;
+
+# #######################################
+# WRAPPERS of tutorial
+# #######################################
+DROP WRAPPER JDBC IF EXISTS address CASCADE;
+
+CREATE WRAPPER JDBC address
+    FOLDER = '/1 - first steps/2 - base views'
+    DATASOURCENAME=acme_crm_ds
+    CATALOGNAME='acme_crm' 
+    RELATIONNAME='address' 
+    OUTPUTSCHEMA (
+        client_fid = 'client_fid' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='50', description='', sourcetypeid='12', sourcetypename='VARCHAR')  NOT NULL SORTABLE,
+        street = 'street' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='100', description='', sourcetypeid='12', sourcetypename='VARCHAR')  SORTABLE,
+        city = 'city' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='100', description='', sourcetypeid='12', sourcetypename='VARCHAR')  SORTABLE,
+        zip = 'zip' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='100', description='', sourcetypeid='12', sourcetypename='VARCHAR')  SORTABLE,
+        state = 'state' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='100', description='', sourcetypeid='12', sourcetypename='VARCHAR')  SORTABLE,
+        primary_phone = 'primary_phone' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='100', description='', sourcetypeid='12', sourcetypename='VARCHAR')  SORTABLE
+    );
+
+CHOWN admin WRAPPER JDBC address LASTMODIFICATIONUSER admin;
+
+DROP WRAPPER JDBC IF EXISTS client CASCADE;
+
+CREATE WRAPPER JDBC client
+    FOLDER = '/1 - first steps/2 - base views'
+    DATASOURCENAME=acme_crm_ds
+    CATALOGNAME='acme_crm' 
+    RELATIONNAME='client' 
+    OUTPUTSCHEMA (
+        client_id = 'client_id' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='50', description='', sourcetypeid='12', sourcetypename='VARCHAR')  NOT NULL SORTABLE,
+        name = 'name' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='100', description='', sourcetypeid='12', sourcetypename='VARCHAR')  NOT NULL SORTABLE,
+        surname = 'surname' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='100', description='', sourcetypeid='12', sourcetypename='VARCHAR')  NOT NULL SORTABLE,
+        client_type = 'client_type' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='2', description='', sourcetypeid='12', sourcetypename='VARCHAR')  NOT NULL SORTABLE
+    )
+    CONSTRAINT 'PRIMARY' PRIMARY KEY ( 'client_id' )
+    INDEX 'PRIMARY' CLUSTER UNIQUE PRIMARY ( 'client_id' );
+
+CHOWN admin WRAPPER JDBC client LASTMODIFICATIONUSER admin;
+
+DROP WRAPPER JDBC IF EXISTS client_type CASCADE;
+
+CREATE WRAPPER JDBC client_type
+    FOLDER = '/1 - first steps/2 - base views'
+    DATASOURCENAME=acme_crm_ds
+    CATALOGNAME='acme_crm' 
+    RELATIONNAME='client_type' 
+    OUTPUTSCHEMA (
+        code = 'code' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='2', description='', sourcetypeid='12', sourcetypename='VARCHAR')  NOT NULL SORTABLE,
+        value = 'value' :'java.lang.String' (OPT) (sourcetyperadix='10', sourcetypesize='100', description='', sourcetypeid='12', sourcetypename='VARCHAR')  ESCAPE SORTABLE
+    );
+
+CHOWN admin WRAPPER JDBC client_type LASTMODIFICATIONUSER admin;
+
+DROP WRAPPER WS IF EXISTS get_bill_by_customer_id CASCADE;
+
+CREATE WRAPPER WS get_bill_by_customer_id
+    FOLDER = '/1 - first steps/2 - base views'
+    DATASOURCENAME=soap_billing_ds
+    SERVICENAME='BillProviderService'
+    PORTNAME='BillProvider'
+    OPERATIONNAME='getBillByCustomerID'
+    INPUTMESSAGE='getBillByCustomerIDRequest'
+    OUTPUTMESSAGE='getBillByCustomerIDResponse'
+    OUTPUTSCHEMA (
+    customer_id='$0' (OBL),
+    return = '$$': ARRAY OF (
+        bill = 'Bill': REGISTER OF (
+            ssn='ssn',
+            billing_end_date='billing_end_date',
+            phone_center='phone_center',
+            due_date='due_date',
+            balance='balance',
+            billing_period_id='billing_period_id',
+            billing_start_date='billing_start_date',
+            billing_id='billing_id',
+            customer_id='customer_id',
+            package_id='package_id',
+            amount_due='amount_due',
+            tax_id='tax_id'
+        )
+    )
+    );
+
+CHOWN admin WRAPPER WS get_bill_by_customer_id LASTMODIFICATIONUSER admin;
+
+# #######################################
+# STORED PROCEDURES of tutorial
+# #######################################
+# No stored procedures in database tutorial
+# #######################################
+# TYPES of tutorial
+# #######################################
+DROP TYPE IF EXISTS getbillbycustomerid_return_bill CASCADE;
+
+CREATE TYPE getbillbycustomerid_return_bill AS REGISTER OF (ssn:text, billing_end_date:text, phone_center:text, due_date:text, balance:text, billing_period_id:text, billing_start_date:text, billing_id:text, customer_id:text, package_id:text, amount_due:text, tax_id:text);
+
+DROP TYPE IF EXISTS getbillbycustomerid_return CASCADE;
+
+CREATE TYPE getbillbycustomerid_return AS ARRAY OF getbillbycustomerid_return_bill;
+
+# #######################################
+# MAPS of tutorial
+# #######################################
+# No maps in database tutorial
+# #######################################
+# BASE VIEWS of tutorial
+# #######################################
+DROP VIEW IF EXISTS address CASCADE;
+
+CREATE TABLE address I18N gb (
+        client_fid:text (sourcetyperadix = '10', sourcetypesize = '50', description = '', sourcetypeid = '12'), 
+        street:text (sourcetyperadix = '10', sourcetypesize = '100', description = '', sourcetypeid = '12'), 
+        city:text (sourcetyperadix = '10', sourcetypesize = '100', description = '', sourcetypeid = '12'), 
+        zip:text (sourcetyperadix = '10', sourcetypesize = '100', description = '', sourcetypeid = '12'), 
+        state:text (sourcetyperadix = '10', sourcetypesize = '100', description = '', sourcetypeid = '12'), 
+        primary_phone:text (sourcetyperadix = '10', sourcetypesize = '100', description = '', sourcetypeid = '12')
+    )
+    FOLDER = '/1 - first steps/2 - base views'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD address(
+        I18N gb
+        CONSTRAINTS (
+             ADD client_fid (any) OPT ANY
+             ADD street (any) OPT ANY
+             ADD city (any) OPT ANY
+             ADD zip (any) OPT ANY
+             ADD state (any) OPT ANY
+             ADD primary_phone (any) OPT ANY
+        )
+        OUTPUTLIST (city, client_fid, primary_phone, state, street, zip
+        )
+        WRAPPER (jdbc address)
+    );
+
+CHOWN admin VIEW address LASTMODIFICATIONUSER admin;
+
+DROP VIEW IF EXISTS client CASCADE;
+
+CREATE TABLE client I18N gb (
+        client_id:text (sourcetyperadix = '10', sourcetypesize = '50', description = '', sourcetypeid = '12'), 
+        name:text (sourcetyperadix = '10', sourcetypesize = '100', description = '', sourcetypeid = '12'), 
+        surname:text (sourcetyperadix = '10', sourcetypesize = '100', description = '', sourcetypeid = '12'), 
+        client_type:text (sourcetyperadix = '10', sourcetypesize = '2', description = '', sourcetypeid = '12')
+    )
+    FOLDER = '/1 - first steps/2 - base views'
+    CONSTRAINT 'PRIMARY' PRIMARY KEY ( 'client_id' )
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD client(
+        I18N gb
+        CONSTRAINTS (
+             ADD client_id (any) OPT ANY
+             ADD name (any) OPT ANY
+             ADD surname (any) OPT ANY
+             ADD client_type (any) OPT ANY
+        )
+        OUTPUTLIST (client_id, client_type, name, surname
+        )
+        WRAPPER (jdbc client)
+    );
+
+CHOWN admin VIEW client LASTMODIFICATIONUSER admin;
+
+DROP VIEW IF EXISTS client_type CASCADE;
+
+CREATE TABLE client_type I18N gb (
+        code:text (sourcetyperadix = '10', sourcetypesize = '2', description = '', sourcetypeid = '12'), 
+        value:text (sourcetyperadix = '10', sourcetypesize = '100', description = '', sourcetypeid = '12')
+    )
+    FOLDER = '/1 - first steps/2 - base views'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD client_type(
+        I18N gb
+        CONSTRAINTS (
+             ADD code (any) OPT ANY
+             ADD value (any) OPT ANY
+        )
+        OUTPUTLIST (code, value
+        )
+        WRAPPER (jdbc client_type)
+    );
+
+CHOWN admin VIEW client_type LASTMODIFICATIONUSER admin;
+
+DROP VIEW IF EXISTS get_bill_by_customer_id CASCADE;
+
+CREATE TABLE get_bill_by_customer_id I18N gb (
+        customer_id:text, 
+        return:getbillbycustomerid_return
+    )
+    FOLDER = '/1 - first steps/2 - base views'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD get_bill_by_customer_id(
+        I18N gb
+        CONSTRAINTS (
+             ADD customer_id (=) OBL ONE
+             ADD return NOS ZERO ()
+             ADD return NOS ZERO ()
+             ADD return.ssn NOS ZERO ()
+             ADD return.billing_end_date NOS ZERO ()
+             ADD return.phone_center NOS ZERO ()
+             ADD return.due_date NOS ZERO ()
+             ADD return.balance NOS ZERO ()
+             ADD return.billing_period_id NOS ZERO ()
+             ADD return.billing_start_date NOS ZERO ()
+             ADD return.billing_id NOS ZERO ()
+             ADD return.customer_id NOS ZERO ()
+             ADD return.package_id NOS ZERO ()
+             ADD return.amount_due NOS ZERO ()
+             ADD return.tax_id NOS ZERO ()
+        )
+        OUTPUTLIST (customer_id, return
+        )
+        WRAPPER (ws get_bill_by_customer_id)
+    );
+
+CHOWN admin VIEW get_bill_by_customer_id LASTMODIFICATIONUSER admin;
+
+# #######################################
+# VIEWS of tutorial
+# #######################################
+DROP VIEW IF EXISTS billing_information CASCADE;
+
+CREATE VIEW billing_information FOLDER = '/1 - first steps/3 - derived views' AS SELECT customer_id, ssn, billing_end_date, phone_center, due_date, balance, billing_period_id, billing_start_date, billing_id, return_customer_id, package_id, amount_due, tax_id FROM FLATTEN get_bill_by_customer_id AS v ( v.return);
+
+CHOWN admin VIEW billing_information LASTMODIFICATIONUSER admin;
+
+ALTER VIEW billing_information
+ LAYOUT (get_bill_by_customer_id = [20, 20, 310, 66]);
+
+DROP VIEW IF EXISTS personal_data_crm CASCADE;
+
+CREATE VIEW personal_data_crm FOLDER = '/1 - first steps/3 - derived views' AS SELECT address.street AS street, address.city AS city, address.zip AS zip, address.state AS state, address.primary_phone AS primary_phone, client.client_id AS client_id, client.name AS name, client.surname AS surname, client.client_type AS client_type, client_type.code AS code, client_type.value AS value FROM (client AS client INNER JOIN address AS address ON client.client_id = address.client_fid ) INNER JOIN client_type AS client_type ON client.client_type = client_type.code ;
+
+ALTER VIEW personal_data_crm
+ LAYOUT (client = [0, 88, 200, 106], address = [250, 0, 200, 146], client_type = [250, 176, 200, 66]);
+
+CHOWN admin VIEW personal_data_crm LASTMODIFICATIONUSER admin;
+
+DROP VIEW IF EXISTS client_with_bills CASCADE;
+
+CREATE VIEW client_with_bills FOLDER = '/1 - first steps/3 - derived views' AS SELECT personal_data_crm.street AS street, personal_data_crm.city AS city, personal_data_crm.zip AS zip, personal_data_crm.state AS state, personal_data_crm.primary_phone AS primary_phone, personal_data_crm.client_id AS client_id, personal_data_crm.name AS name, personal_data_crm.surname AS surname, personal_data_crm.client_type AS client_type, personal_data_crm.code AS code, personal_data_crm.value AS value, billing_information.customer_id AS customer_id, billing_information.ssn AS ssn, billing_information.billing_end_date AS billing_end_date, billing_information.phone_center AS phone_center, billing_information.due_date AS due_date, billing_information.balance AS balance, billing_information.billing_period_id AS billing_period_id, billing_information.billing_start_date AS billing_start_date, billing_information.billing_id AS billing_id, billing_information.package_id AS package_id, billing_information.amount_due AS amount_due, billing_information.tax_id AS tax_id FROM personal_data_crm AS personal_data_crm INNER JOIN billing_information AS billing_information ON personal_data_crm.client_id = billing_information.customer_id ;
+
+ALTER VIEW client_with_bills
+ LAYOUT (personal_data_crm = [20, 20, 200, 225], billing_information = [470, 20, 200, 225]);
+
+ALTER VIEW client_with_bills
+ CACHE PARTIAL PRELOAD
+     BATCHSIZEINCACHE DEFAULT TIMETOLIVEINCACHE DEFAULT;
+
+CHOWN admin VIEW client_with_bills LASTMODIFICATIONUSER admin;
+
+DROP VIEW IF EXISTS amount_due_by_client CASCADE;
+
+CREATE VIEW amount_due_by_client FOLDER = '/1 - first steps/3 - derived views' AS SELECT client_id AS client_id, name AS name, surname AS surname, sum(cast('float', amount_due)) AS total_amount FROM client_with_bills GROUP BY client_id, name, surname;
+
+CHOWN admin VIEW amount_due_by_client LASTMODIFICATIONUSER admin;
+
+ALTER VIEW amount_due_by_client
+ LAYOUT (client_with_bills = [20, 20, 230, 400]);
+
+DROP VIEW IF EXISTS client_info_impl CASCADE;
+
+CREATE VIEW client_info_impl FOLDER = '/1 - first steps/3 - derived views' AS SELECT client_with_bills.primary_phone AS phone, client_with_bills.client_id AS client_id, client_with_bills.client_type AS client_type, to_localdate('yyyy-MM-dd HH:mm:ss', client_with_bills.due_date) AS billing_due_date, cast('decimal', client_with_bills.balance) AS balance, concat(client_with_bills.name, ' ', client_with_bills.surname) AS full_name, concat(client_with_bills.street, ',', client_with_bills.city, ',', client_with_bills.zip, ',', client_with_bills.state) AS full_address FROM client_with_bills;
+
+CHOWN admin VIEW client_info_impl LASTMODIFICATIONUSER admin;
+
+ALTER VIEW client_info_impl
+ LAYOUT (client_with_bills = [20, 20, 200, 486]);
+
+DROP INTERFACE VIEW IF EXISTS i_client_info CASCADE;
+
+CREATE INTERFACE VIEW i_client_info (
+        client_id:text,
+        full_name:text,
+        client_type:text,
+        full_address:text,
+        phone:text,
+        billing_due_date:localdate,
+        balance:decimal
+    )
+    SET IMPLEMENTATION client_info_impl
+    FOLDER = '/2 - data services';
+
+ALTER VIEW i_client_info
+ LAYOUT (client_info_impl = [700, 10, 209, 166]);
+
+# #######################################
+# ASSOCIATIONS of tutorial
+# #######################################
+DROP ASSOCIATION IF EXISTS client_address;
+
+CREATE ASSOCIATION client_address REFERENTIAL CONSTRAINT 
+    ENDPOINT address client PRINCIPAL (1)
+    ENDPOINT belongs_to_client address (1)
+    ADD MAPPING client_id=client_fid;
+
+ALTER ASSOCIATION client_address
+ LAYOUT (client = [10, 60, 200, 106], address = [500, 40, 200, 146]);
+
+CHOWN admin ASSOCIATION client_address LASTMODIFICATIONUSER admin;
+
+# #######################################
+# WEBSERVICES of tutorial
+# #######################################
+DROP REST WEBSERVICE IF EXISTS customer;
+
+CREATE REST WEBSERVICE customer
+    CONNECTION (
+        CHUNKSIZE = 1000
+        CHUNKTIMEOUT = 90000
+        QUERYTIMEOUT = 900000
+        POOLENABLED = true
+        POOLINITSIZE = 0
+        POOLMAXACTIVE = 30
+    )
+    DEFAULTREPRESENTATION = HTML
+    SUPPORTEDREPRESENTATIONS (HTML, XML, JSON)    AUTHENTICATION (BASIC VDP )
+
+    RESOURCES (
+        VIEW i_client_info FIELDS (
+            client_id : 'text'
+        )
+    )
+    OPTIONS ( NULLVALUESASEMPTYXMLELEMENTS = false ) 
+    OPENAPI2 ( API_VERSION = '1.0.0' ) 
+    FOLDER = '/2 - data services/rest';
+
+CHOWN admin WEBSERVICE customer LASTMODIFICATIONUSER admin;
+
+DROP SOAP WEBSERVICE IF EXISTS customerws;
+
+CREATE SOAP WEBSERVICE customerws
+    CONNECTION (
+        CHUNKSIZE = 1000
+        CHUNKTIMEOUT = 90000
+        QUERYTIMEOUT = 900000
+        POOLENABLED = true
+        POOLINITSIZE = 0
+        POOLMAXACTIVE = 30
+    )
+    I18N  = gb
+    DATETYPEMAPPING DATE
+    NOWRAPARRAYS
+    RAISEFAULTONIDU
+    DONOTAPPLYOUTPUTXSLTTOERRORS
+    AUTHENTICATION (WSS BASIC VDP )
+    OUTPUT 
+        ( STYLE DOCUMENT )
+    OPERATION 'getClientById' (
+        TYPE SELECT
+        SCHEMA VIEW i_client_info
+        VQL = 'SELECT client_id, full_name, client_type, full_address, phone, billing_due_date, balance FROM tutorial.i_client_info ^ExecuteIfIsNotNull("WHERE ",@WHEREEXPRESSION,"") CONTEXT (''i18n'' = ''gb''^ExecuteIfIsNotNull(", ",@VERBOSEERRORS,"")^ExecuteIfIsNotNull(", ",@CONTEXTEXPRESSION,""))'
+        INPUTS 'getClientById' (
+            'CLIENT_ID' client_id:'text' '=' 
+        )
+        OUTPUT 
+            'I_CLIENT_INFOReturn': Array of ( 'I_CLIENT_INFOReturnRow': Register of (
+                client_id : 'text',
+                full_name : 'text',
+                client_type : 'text',
+                full_address : 'text',
+                phone : 'text',
+                billing_due_date : 'localdate',
+                balance : 'decimal'
+            ) (
+                    '/balance'='BALANCE',
+                    '/billing_due_date'='BILLING_DUE_DATE',
+                    '/client_id'='CLIENT_ID',
+                    '/client_type'='CLIENT_TYPE',
+                    '/full_address'='FULL_ADDRESS',
+                    '/full_name'='FULL_NAME',
+                    '/phone'='PHONE'))
+    )
+    FOLDER = '/2 - data services/soap';
+
+CHOWN admin WEBSERVICE customerws LASTMODIFICATIONUSER admin;
+
+# #######################################
+# WIDGETS of tutorial
+# #######################################
+# No widgets in database tutorial
+# #######################################
+# WEBCONTAINER WEB SERVICE DEPLOYMENTS of tutorial
+# #######################################
+UNDEPLOY IF EXISTS WEBSERVICE customer;
+
+DEPLOY WEBSERVICE customer;
+
+UNDEPLOY IF EXISTS WEBSERVICE customerws;
+
+DEPLOY WEBSERVICE customerws;
+
+# #######################################
+# WEBCONTAINER WIDGET DEPLOYMENTS of tutorial
+# #######################################
+# No deployed widgets in database tutorial
+# #######################################
+# Closing connection with database tutorial
+# #######################################
+CLOSE;
+
+# #######################################
+# Connecting to database admin
+# #######################################
+CONNECT DATABASE ADMIN;
+
+# #######################################
+# USER PRIVILEGES
+# #######################################
+# #######################################
+# ROLE PRIVILEGES
+# #######################################
+# #######################################
+# RESOURCE MANAGER PLANS
+# #######################################
+# #######################################
+# RESOURCE MANAGER RULES
+# #######################################
+# #######################################
+# Closing connection with database admin
+# #######################################
+CLOSE;
+
+
+
+
+# ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+EXIT SINGLE USER MODE;
