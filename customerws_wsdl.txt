@@ -1,0 +1,93 @@
+<wsdl:definitions xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://com/denodo/webservice/customerws" xmlns:intf="http://com/denodo/webservice/customerws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://com/denodo/webservice/customerws">
+ <!--
+WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)
+-->
+<wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://com/denodo/webservice/customerws">
+<complexType name="GetClientById">
+<sequence>
+<element maxOccurs="1" minOccurs="0" name="CLIENT_ID" type="xsd:string"/>
+</sequence>
+</complexType>
+<element name="GetClientById" type="impl:GetClientById"/>
+<complexType name="I_CLIENT_INFOReturnRow">
+<sequence>
+<element maxOccurs="1" minOccurs="0" name="CLIENT_ID" type="xsd:string"/>
+<element maxOccurs="1" minOccurs="0" name="FULL_NAME" type="xsd:string"/>
+<element maxOccurs="1" minOccurs="0" name="CLIENT_TYPE" type="xsd:string"/>
+<element maxOccurs="1" minOccurs="0" name="FULL_ADDRESS" type="xsd:string"/>
+<element maxOccurs="1" minOccurs="0" name="PHONE" type="xsd:string"/>
+<element maxOccurs="1" minOccurs="0" name="BILLING_DUE_DATE" type="xsd:date"/>
+<element maxOccurs="1" minOccurs="0" name="BALANCE" type="xsd:decimal"/>
+</sequence>
+</complexType>
+<element name="I_CLIENT_INFOReturn">
+<complexType>
+<sequence>
+<element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:I_CLIENT_INFOReturnRow"/>
+</sequence>
+</complexType>
+</element>
+<complexType name="ArrayOfI_CLIENT_INFOReturnRow">
+<sequence>
+<element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:I_CLIENT_INFOReturnRow"/>
+</sequence>
+</complexType>
+<complexType name="_QueryExecutionError">
+<sequence>
+<element maxOccurs="1" minOccurs="0" name="errorCode" type="xsd:int"/>
+<element maxOccurs="1" minOccurs="0" name="errorMessage" type="xsd:string"/>
+</sequence>
+</complexType>
+<complexType name="ArrayOf_QueryExecutionError">
+<sequence>
+<element maxOccurs="unbounded" minOccurs="0" name="item" type="impl:_QueryExecutionError"/>
+</sequence>
+</complexType>
+<complexType name="GetClientByIdException">
+<sequence>
+<element maxOccurs="1" minOccurs="0" name="data" type="impl:ArrayOfI_CLIENT_INFOReturnRow"/>
+<element maxOccurs="1" minOccurs="0" name="error" type="impl:ArrayOf_QueryExecutionError"/>
+</sequence>
+</complexType>
+<element name="GetClientByIdException" type="impl:GetClientByIdException"/>
+</schema>
+</wsdl:types>
+<wsdl:message name="GetClientByIdException">
+<wsdl:part element="impl:GetClientByIdException" name="GetClientByIdException"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getClientByIdResponse">
+<wsdl:part element="impl:I_CLIENT_INFOReturn" name="I_CLIENT_INFOReturn"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getClientByIdRequest">
+<wsdl:part element="impl:GetClientById" name="GetClientById"> </wsdl:part>
+</wsdl:message>
+<wsdl:portType name="customerws">
+<wsdl:operation name="getClientById" parameterOrder="GetClientById">
+<wsdl:input message="impl:getClientByIdRequest" name="getClientByIdRequest"> </wsdl:input>
+<wsdl:output message="impl:getClientByIdResponse" name="getClientByIdResponse"> </wsdl:output>
+<wsdl:fault message="impl:GetClientByIdException" name="GetClientByIdException"> </wsdl:fault>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="customerwsSoapBinding" type="impl:customerws">
+<wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="getClientById">
+<wsdlsoap:operation soapAction="http://localhost:8080/customerws/services/customerws/getClientById"/>
+<wsdl:input name="getClientByIdRequest">
+<wsdlsoap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getClientByIdResponse">
+<wsdlsoap:body use="literal"/>
+</wsdl:output>
+<wsdl:fault name="GetClientByIdException">
+<wsdlsoap:fault name="GetClientByIdException" use="literal"/>
+</wsdl:fault>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="customerwsService">
+<wsdl:port binding="impl:customerwsSoapBinding" name="customerws">
+<wsdlsoap:address location="http://127.0.0.1:9090/server/tutorial/customerws/services/customerws"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

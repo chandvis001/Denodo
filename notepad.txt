@@ -1,0 +1,8 @@
+java -jar start.jar
+
+C:\Users\ChandanKumar\Desktop\DenodoLearning\denodo_tutorial_files\jetty
+
+0 row(s) affected
+getBills: returns a list with all the bills in the system.
+getBillByCustomerID: returns a list with all the bills for the specified input customer id.
+getBillByPhoneCenter: returns a list with all the bills for the specified input phone center.
